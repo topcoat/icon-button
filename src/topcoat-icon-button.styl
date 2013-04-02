@@ -13,27 +13,20 @@
  .is-disabled - Simulates a disabled state on mobile devices
 
    <a class="topcoat-icon-button">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-iconi icon-menu-reveal"></i>
    </a>
     <a class="topcoat-icon-button is-active">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon icon-menu-reveal"></i>
     </a>
     <a class="topcoat-icon-button is-disabled">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon icon-menu-reveal"></i>
     </a>
 */
 
 .topcoat-icon-button {
     button-base()
-    /*
-    *  TODO: See if we can check for existance of
-    *  topcoat-button to limit duplication
-    */
-    /*
-    if .topcoat-button
-      @extend .topcoat-button
-    else
-    */
+    //  TODO: See if we can check for existance of
+    //        topcoat-button to limit duplication
     padding: var-padding--icon;
     margin: var-margin;
     font-size: var-font-size;
@@ -73,13 +66,13 @@
  .is-disabled - Simulates disabled state
 
    <a class="topcoat-icon-button--quiet">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon icon-menu-reveal"></i>
    </a>
     <a class="topcoat-icon-button--quiet is-active">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon icon-menu-reveal"></i>
     </a>
     <a class="topcoat-icon-button--quiet is-disabled">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon icon-menu-reveal"></i>
     </a>
 */
 
@@ -115,13 +108,13 @@
  .is-disabled - Simulates a disabled state on mobile devices
 
    <a class="topcoat-icon-button--large">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon icon-menu-reveal"></i>
    </a>
     <a class="topcoat-icon-button--large is-active">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon icon-menu-reveal"></i>
     </a>
     <a class="topcoat-icon-button--large is-disabled">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon icon-menu-reveal"></i>
     </a>
 */
 
@@ -155,13 +148,13 @@
  .is-disabled - Simulates a disabled state on mobile devices
 
    <a class="topcoat-icon-button--large--quiet">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon--large icon-menu-reveal"></i>
    </a>
     <a class="topcoat-icon-button--large--quiet is-active">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon--large icon-menu-reveal"></i>
     </a>
     <a class="topcoat-icon-button--large--quiet is-disabled">
-      <i class="topcoat-icon-button-icon></i>
+      <i class="topcoat-icon--large icon-menu-reveal"></i>
     </a>
 */
 
@@ -178,5 +171,22 @@
 .topcoat-icon-button:disabled,
 .topcoat-icon-button.is-disabled {
     disabled()
+}
+
+.topcoat-icon {
+  position: var-position;
+  display: var-display;
+  overflow: var-overflow;
+  width: var-width--icon;
+  height: var-height--icon;
+  margin: var-margin--icon;
+  background-size: var-background-size--icon;
+  text-indent: var-text-indent;
+  vertical-align: var-vertical-align;
+}
+
+.topcoat-icon--large {
+  width: var-width--large--icon;
+  height: var-height--large--icon;
 }
 
