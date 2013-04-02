@@ -1,0 +1,182 @@
+@import button-mixin
+
+/*
+ TopCoat Icon Button
+ -------------------
+
+ :active - Active state
+
+ .is-active - Simulates an active state on mobile devices
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates a disabled state on mobile devices
+
+   <a class="topcoat-icon-button">
+      <i class="topcoat-icon-button-icon></i>
+   </a>
+    <a class="topcoat-icon-button is-active">
+      <i class="topcoat-icon-button-icon></i>
+    </a>
+    <a class="topcoat-icon-button is-disabled">
+      <i class="topcoat-icon-button-icon></i>
+    </a>
+*/
+
+.topcoat-icon-button {
+    button-base()
+    /*
+    *  TODO: See if we can check for existance of
+    *  topcoat-button to limit duplication
+    */
+    /*
+    if .topcoat-button
+      @extend .topcoat-button
+    else
+    */
+    padding: var-padding--icon;
+    margin: var-margin;
+    font-size: var-font-size;
+    line-height: var-line-height;
+    letter-spacing: var-letter-spacing;
+    color: var-color;
+    text-shadow: var-text-shadow;
+    vertical-align: var-vertical-align;
+    background-color: var-background-color;
+    box-shadow: var-box-shadow;
+    border: var-border;
+    border-radius: var-border-radius;
+
+}
+
+.topcoat-icon-button:active,
+.topcoat-icon-button.is-active {
+    background-color: var-background-color--down;
+    box-shadow: var-box-shadow--down;
+}
+
+.topcoat-icon-button:disabled,
+.topcoat-icon-button.is-disabled {
+    disabled()
+}
+
+/*
+ TopCoat Quiet Icon Button
+ --------------------
+
+ :active - Button active state
+
+ .is-active - Simulates active state for a button on touch interfaces
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates disabled state
+
+   <a class="topcoat-icon-button--quiet">
+      <i class="topcoat-icon-button-icon></i>
+   </a>
+    <a class="topcoat-icon-button--quiet is-active">
+      <i class="topcoat-icon-button-icon></i>
+    </a>
+    <a class="topcoat-icon-button--quiet is-disabled">
+      <i class="topcoat-icon-button-icon></i>
+    </a>
+*/
+
+.topcoat-icon-button--quiet {
+    @extend .topcoat-icon-button
+    button-base--quiet()
+}
+
+.topcoat-icon-button--quiet:active,
+.topcoat-icon-button--quiet.is-active {
+    color: var-color;
+    text-shadow: var-text-shadow;
+    background-color: var-background-color--down;
+    border: var-border;
+    box-shadow: var-box-shadow--down;
+}
+
+.topcoat-button--quiet:disabled,
+.topcoat-button--quiet.is-disabled {
+    disabled()
+}
+
+/*
+ TopCoat Large Icon Button
+ -------------------
+
+ :active - Active state
+
+ .is-active - Simulates an active state on mobile devices
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates a disabled state on mobile devices
+
+   <a class="topcoat-icon-button--large">
+      <i class="topcoat-icon-button-icon></i>
+   </a>
+    <a class="topcoat-icon-button--large is-active">
+      <i class="topcoat-icon-button-icon></i>
+    </a>
+    <a class="topcoat-icon-button--large is-disabled">
+      <i class="topcoat-icon-button-icon></i>
+    </a>
+*/
+
+.topcoat-icon-button--large {
+    @extend .topcoat-icon-button
+    width: var-width--large-icon;
+    height: var-height--large--icon;
+}
+
+.topcoat-icon-button:active,
+.topcoat-icon-button.is-active {
+    background-color: var-background-color--down;
+    box-shadow: var-box-shadow--down;
+}
+
+.topcoat-icon-button:disabled,
+.topcoat-icon-button.is-disabled {
+    disabled()
+}
+
+/*
+ TopCoat Large Quiet Icon Button
+ -------------------
+
+ :active - Active state
+
+ .is-active - Simulates an active state on mobile devices
+
+ :disabled - Disabled state
+
+ .is-disabled - Simulates a disabled state on mobile devices
+
+   <a class="topcoat-icon-button--large--quiet">
+      <i class="topcoat-icon-button-icon></i>
+   </a>
+    <a class="topcoat-icon-button--large--quiet is-active">
+      <i class="topcoat-icon-button-icon></i>
+    </a>
+    <a class="topcoat-icon-button--large--quiet is-disabled">
+      <i class="topcoat-icon-button-icon></i>
+    </a>
+*/
+
+.topcoat-icon-button--large--quiet {
+    @extend .topcoat-icon-button--large
+    button-base--quiet()
+}
+
+.topcoat-icon-button:active,
+.topcoat-icon-button.is-active {
+    @extend .topcoat-button--quiet:active
+}
+
+.topcoat-icon-button:disabled,
+.topcoat-icon-button.is-disabled {
+    disabled()
+}
+
