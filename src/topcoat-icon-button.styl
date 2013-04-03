@@ -154,15 +154,15 @@
  .is-disabled - Simulates a disabled state on mobile devices
 
     <a class="topcoat-icon-button--large--quiet">
-        <i class="topcoat-icon--large--quiet topcoat-icon--menu-stack"></i>
+        <i class="topcoat-icon topcoat-icon--menu-stack"></i>
     </a>
 
     <a class="topcoat-icon-button--large--quiet is-active">
-      <i class="topcoat-icon--large--quiet topcoat-icon--menu-stack"></i>
+      <i class="topcoat-icon topcoat-icon--menu-stack"></i>
     </a>
 
     <a class="topcoat-icon-button--large--quiet is-disabled">
-      <i class="topcoat-icon--large--quiet topcoat-icon--menu-stack"></i>
+      <i class="topcoat-icon topcoat-icon--menu-stack"></i>
     </a>
 */
 
@@ -171,13 +171,13 @@
     button-base--quiet()
 }
 
-.topcoat-icon-button:active,
-.topcoat-icon-button.is-active {
+.topcoat-icon-button--large--quiet:active,
+.topcoat-icon-button--large--quiet.is-active {
     @extend .topcoat-icon-button--quiet:active
 }
 
-.topcoat-icon-button:disabled,
-.topcoat-icon-button.is-disabled {
+.topcoat-icon-button--large--quiet:disabled,
+.topcoat-icon-button--large--quiet.is-disabled {
     disabled()
 }
 
