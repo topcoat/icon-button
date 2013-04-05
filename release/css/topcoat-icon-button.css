@@ -212,8 +212,6 @@ limitations under the License.
   overflow: hidden;
   width: 24px;
   height: 24px;
-  margin: var-margin--icon;
-  background-size: cover;
   text-indent: 100%;
   vertical-align: middle;
 }
@@ -326,8 +324,6 @@ limitations under the License.
   overflow: hidden;
   width: 24px;
   height: 24px;
-  margin: var-margin--icon;
-  background-size: cover;
   text-indent: 100%;
   vertical-align: middle;
 }
