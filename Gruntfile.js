@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            src: ['tmp/src/controls', 'tmp/src/utils'],
+            tmp: ['tmp'],
             zip: ['tmp/src/*.zip', 'tmp/src/controls/*.zip', 'tmp/src/skins/*.zip', 'tmp/src/utils/*.zip']
         },
 
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Default task.
-    grunt.registerTask('default', ['topcoat', 'build']);
+    grunt.registerTask('default', ['clean', 'topcoat', 'build']);
     grunt.registerTask('build', ['stylus', 'cssmin', 'jade', 'nodeunit']);
 
 };
