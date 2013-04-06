@@ -71,7 +71,7 @@ module.exports = function(grunt) {
                 cwd: 'test/perf',
                 src: ['*.jade'],
                 dest: 'test/perf/',
-                ext: '.html'
+                ext: '.test.html'
             }
         },
         nodeunit: {
