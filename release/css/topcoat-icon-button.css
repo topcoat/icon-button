@@ -43,22 +43,20 @@ limitations under the License.
 .topcoat-icon-button--large--quiet {
   position: relative;
   display: inline-block;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  font: inherit;
-  color: inherit;
-  text-align: center;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  background: transparent;
-  border: none;
+  vertical-align: top;
   box-sizing: border-box;
   background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
   user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   padding: 0 0.75rem;
   font-size: 16px;
   line-height: 3rem;
@@ -108,7 +106,6 @@ limitations under the License.
 */
 .topcoat-icon-button--quiet {
   background: transparent;
-/* Border is added so button doesn't shift when clicked */
   border: 1px solid transparent;
   box-shadow: none;
 }
@@ -195,7 +192,6 @@ limitations under the License.
 */
 .topcoat-icon-button--large--quiet {
   background: transparent;
-/* Border is added so button doesn't shift when clicked */
   border: 1px solid transparent;
   box-shadow: none;
 }
@@ -213,7 +209,6 @@ limitations under the License.
   overflow: hidden;
   width: 1.5rem;
   height: 1.5rem;
-  text-indent: 100%;
   vertical-align: middle;
 }
 .topcoat-icon--large {
