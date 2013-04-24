@@ -2,8 +2,8 @@
 @import utils
 
 /*
- TopCoat Icon Button
- -------------------
+ Icon Button
+ -----------
 
  :active - Active state
 
@@ -25,39 +25,31 @@
       <span class="topcoat-icon topcoat-icon--menu-stack"></span>
     </a>
 */
-
-.topcoat-icon-button {
+.topcoat-icon-button
     button-base()
-    //  TODO: See if we can check for existance of
-    //        topcoat-button to limit duplication
-    padding: var-padding--icon-button;
-    font-size: var-font-size;
-    line-height: var-line-height;
-    letter-spacing: var-letter-spacing;
-    color: var-color;
-    text-shadow: var-text-shadow;
-    vertical-align: var-vertical-align;
-    background-color: var-background-color;
-    box-shadow: var-box-shadow;
-    border: var-border;
-    border-radius: var-border-radius;
-
-}
+    padding var-padding--icon-button
+    line-height var-height
+    letter-spacing var-letter-spacing
+    color var-color
+    text-shadow var-text-shadow
+    vertical-align baseline
+    background-color var-background-color
+    box-shadow var-box-shadow
+    border var-border
+    border-radius var-border-radius
 
 .topcoat-icon-button:active,
-.topcoat-icon-button.is-active {
-    background-color: var-background-color--down;
-    box-shadow: var-box-shadow--down;
-}
+.topcoat-icon-button.is-active
+    background-color var-background-color--down
+    box-shadow var-box-shadow--down
 
 .topcoat-icon-button:disabled,
-.topcoat-icon-button.is-disabled {
+.topcoat-icon-button.is-disabled
     disabled()
-}
 
 /*
- TopCoat Quiet Icon Button
- --------------------
+ Quiet Icon Button
+ -----------------
 
  :active - Button active state
 
@@ -80,28 +72,25 @@
     </a>
 */
 
-.topcoat-icon-button--quiet {
+.topcoat-icon-button--quiet
     @extend .topcoat-icon-button
     button-base--quiet()
-}
 
 .topcoat-icon-button--quiet:active,
-.topcoat-icon-button--quiet.is-active {
-    color: var-color;
-    text-shadow: var-text-shadow;
-    background-color: var-background-color--down;
-    border: var-border;
-    box-shadow: var-box-shadow--down;
-}
+.topcoat-icon-button--quiet.is-active
+    color var-color
+    text-shadow var-text-shadow
+    background-color var-background-color--down
+    border var-border
+    box-shadow var-box-shadow--down
 
 .topcoat-icon-button--quiet:disabled,
-.topcoat-icon-button--quiet.is-disabled {
+.topcoat-icon-button--quiet.is-disabled
     disabled()
-}
 
 /*
- TopCoat Large Icon Button
- -------------------
+ Large Icon Button
+ -----------------
 
  :active - Active state
 
@@ -124,27 +113,24 @@
     </a>
 */
 
-.topcoat-icon-button--large {
+.topcoat-icon-button--large
     @extend .topcoat-icon-button
-    width: var-width--icon-button--large;
-    height: var-height--icon-button--large;
-    line-height: var-line-height--icon-buton--large;
-}
+    width var-height--large
+    height var-height--large
+    line-height var-height--large
 
 .topcoat-icon-button--large:active,
-.topcoat-icon-button--large.is-active {
-    background-color: var-background-color--down;
-    box-shadow: var-box-shadow--down;
-}
+.topcoat-icon-button--large.is-active
+    background-color var-background-color--down
+    box-shadow var-box-shadow--down
 
 .topcoat-icon-button--large:disabled,
-.topcoat-icon-button--large.is-disabled {
+.topcoat-icon-button--large.is-disabled
     disabled()
-}
 
 /*
- TopCoat Large Quiet Icon Button
- -------------------
+ Large Quiet Icon Button
+ -----------------------
 
  :active - Active state
 
@@ -167,32 +153,27 @@
     </a>
 */
 
-.topcoat-icon-button--large--quiet {
+.topcoat-icon-button--large--quiet
     @extend .topcoat-icon-button--large
     button-base--quiet()
-}
 
 .topcoat-icon-button--large--quiet:active,
-.topcoat-icon-button--large--quiet.is-active {
+.topcoat-icon-button--large--quiet.is-active
     @extend .topcoat-icon-button--quiet:active
-}
 
 .topcoat-icon-button--large--quiet:disabled,
-.topcoat-icon-button--large--quiet.is-disabled {
+.topcoat-icon-button--large--quiet.is-disabled
     disabled()
-}
 
-.topcoat-icon {
+.topcoat-icon
   inline-block()
-  overflow: var-overflow;
-  width: var-width--icon;
-  height: var-height--icon;
-  vertical-align: var-vertical-align--icon;
-}
+  overflow var-overflow
+  width var-size--icon
+  height var-size--icon
+  vertical-align middle
 
-.topcoat-icon--large {
+.topcoat-icon--large
   @extend .topcoat-icon
-  width: var-width--large--icon;
-  height: var-height--large--icon;
-}
+  width var-size--icon--large
+  height var-size--icon--large
 

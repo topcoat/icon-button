@@ -14,8 +14,8 @@ limitations under the License.
 */
 
 /*
- TopCoat Icon Button
- -------------------
+ Icon Button
+ -----------
 
  :active - Active state
 
@@ -58,12 +58,11 @@ limitations under the License.
   white-space: nowrap;
   overflow: hidden;
   padding: 0 0.75rem;
-  font-size: 16px;
   line-height: 3rem;
   letter-spacing: 1px;
   color: #454545;
   text-shadow: 0 1px #fff;
-  vertical-align: top;
+  vertical-align: baseline;
   background-color: #e5e9e8;
   box-shadow: inset 0 1px #fff;
   border: 1px solid #a5a8a8;
@@ -81,8 +80,8 @@ limitations under the License.
   pointer-events: none;
 }
 /*
- TopCoat Quiet Icon Button
- --------------------
+ Quiet Icon Button
+ -----------------
 
  :active - Button active state
 
@@ -126,8 +125,8 @@ limitations under the License.
   pointer-events: none;
 }
 /*
- TopCoat Large Icon Button
- -------------------
+ Large Icon Button
+ -----------------
 
  :active - Active state
 
@@ -167,8 +166,8 @@ limitations under the License.
   pointer-events: none;
 }
 /*
- TopCoat Large Quiet Icon Button
- -------------------
+ Large Quiet Icon Button
+ -----------------------
 
  :active - Active state
 
