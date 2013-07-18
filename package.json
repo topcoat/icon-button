@@ -1,5 +1,5 @@
 {
-  "name": "icon-button",
+  "name": "topcoat-icon-button",
   "version": "0.3.0",
   "description": "TopCoat icon button skin",
   "directories": {
@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "grunt test",
-    "prepublish": ""
+    "prepublish": "grunt"
   },
   "repository": {
     "type": "git",
