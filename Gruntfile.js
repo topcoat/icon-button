@@ -79,18 +79,6 @@ module.exports = function(grunt) {
                     dest: 'css/topcoat-icon-button-desktop-dark.css'
                 }]
             }
-            // compile: {
-            //     options: {
-            //         paths: ['node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-button-base/src/mixins', 'node_modules/topcoat-theme/src/', 'node_modules/topcoat-theme/src/includes'],
-            //         import: ['button-mixin', 'utils', 'theme-topcoat-mobile-light', 'icons'],
-            //         compress: false
-            //     },
-
-            //     files: [{
-            //         src: 'src/topcoat-icon-button.styl',
-            //         dest: 'css/topcoat-icon-button.css'
-            //     }]
-            // }
         },
 
         cssmin: {
@@ -103,18 +91,6 @@ module.exports = function(grunt) {
                 options: {
                     banner: grunt.file.read('src/copyright.styl').toString()
                 }
-            }
-        },
-
-
-        copy: {
-            release: {
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    src: 'node_modules/topcoat-theme/img/hamburger_dark.svg',
-                    dest: 'img'
-                }]
             }
         },
 
@@ -132,7 +108,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
 
         simplemocha: {
             all: {
@@ -153,13 +128,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-topdoc');
 
     // Default task.
     grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
     grunt.registerTask('build', ['stylus']);
     grunt.registerTask('test', ['simplemocha']);
-    grunt.registerTask('release', ['cssmin', 'copy', 'topdoc']);
+    grunt.registerTask('release', ['cssmin', 'topdoc']);
 
 };
