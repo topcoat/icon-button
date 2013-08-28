@@ -15,9 +15,7 @@
 * limitations under the License.
 *
 */
-
-@import button-mixin
-@import utils
+@import button
 /* topdoc
   name: Icon Button
   description: Like button, but it has an icon.
@@ -26,10 +24,10 @@
     :disabled: Disabled state
   markup:
     <button class="topcoat-icon-button">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
     </button>
     <button class="topcoat-icon-button" disabled>
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
     </button>
   tags:
     - desktop
@@ -39,7 +37,7 @@
     - icon
 */
 .topcoat-icon-button
-    button-base()
+    @extend .button
     padding var-padding--icon-button
     line-height var-height
     letter-spacing var-letter-spacing
@@ -56,7 +54,7 @@
     box-shadow var-box-shadow--down
 
 .topcoat-icon-button:disabled
-    disabled()
+    @extend .button--disabled
 /* topdoc
   name: Quiet Icon Button
   description: Like quiet button, but it has an icon.
@@ -65,10 +63,10 @@
     :disabled: Disabled state
   markup:
     <button class="topcoat-icon-button--quiet">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
     </button>
     <button class="topcoat-icon-button--quiet" disabled>
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+      <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
     </button>
   tags:
     - desktop
@@ -80,7 +78,7 @@
 */
 .topcoat-icon-button--quiet
     @extend .topcoat-icon-button
-    button-base--quiet()
+    button--quiet()
 
 .topcoat-icon-button--quiet:active
     color var-color
@@ -90,7 +88,7 @@
     box-shadow var-box-shadow--down
 
 .topcoat-icon-button--quiet:disabled
-    disabled()
+    @extend .button--disabled
 /* topdoc
   name: Large Icon Button
   description: Like large button, but it has an icon.
@@ -99,10 +97,10 @@
     :disabled: Disabled state
   markup:
     <button class="topcoat-icon-button--large">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
     </button>
     <button class="topcoat-icon-button--large" disabled>
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
     </button>
   tags:
     - desktop
@@ -123,7 +121,7 @@
     box-shadow var-box-shadow--down
 
 .topcoat-icon-button--large:disabled
-    disabled()
+    @extend .button--disabled
 /* topdoc
   name: Large Quiet Icon Button
   description: Like large button, but it has an icon and this one is quiet.
@@ -132,10 +130,10 @@
     :disabled: Disabled state
   markup:
     <button class="topcoat-icon-button--large--quiet">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
     </button>
     <button class="topcoat-icon-button--large--quiet" disabled>
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+      <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
     </button>
   tags:
     - desktop
@@ -149,13 +147,13 @@
 
 .topcoat-icon-button--large--quiet
     @extend .topcoat-icon-button--large
-    button-base--quiet()
+    button--quiet()
 
 .topcoat-icon-button--large--quiet:active
     @extend .topcoat-icon-button--quiet:active
 
 .topcoat-icon-button--large--quiet:disabled
-    disabled()
+    @extend .button--disabled
 
 .topcoat-icon
   inline-block()
@@ -163,9 +161,11 @@
   width var-size--icon
   height var-size--icon
   vertical-align middle
+  top var-icon-top
 
 .topcoat-icon--large
   @extend .topcoat-icon
   width var-size--icon--large
   height var-size--icon--large
+  top var-icon-top--large
 

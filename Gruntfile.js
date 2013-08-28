@@ -29,18 +29,68 @@ module.exports = function(grunt) {
         },
 
         stylus: {
-            compile: {
+             mobilelight: {
                 options: {
-                    paths: ['node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-button-base/src/mixins', 'node_modules/topcoat-theme/src/', 'node_modules/topcoat-theme/src/includes'],
-                    import: ['button-mixin', 'utils', 'theme-topcoat-mobile-light', 'icons'],
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    import: ['theme-topcoat-mobile-light', 'nib'],
                     compress: false
                 },
 
                 files: [{
                     src: 'src/topcoat-icon-button.styl',
-                    dest: 'css/topcoat-icon-button.css'
+                    dest: 'css/topcoat-icon-button-mobile-light.css'
+                }]
+            },
+
+            mobiledark: {
+                options: {
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    import: ['theme-topcoat-mobile-dark', 'nib'],
+                    compress: false
+                },
+
+                files: [{
+                    src: 'src/topcoat-icon-button.styl',
+                    dest: 'css/topcoat-icon-button-mobile-dark.css'
+                }]
+            },
+
+            desktoplight: {
+                options: {
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    import: ['theme-topcoat-desktop-light', 'nib'],
+                    compress: false
+                },
+                files: [{
+                    src: 'src/topcoat-icon-button.styl',
+                    dest: 'css/topcoat-icon-button-desktop-light.css'
+                }]
+            },
+
+            desktopdark: {
+                options: {
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    import: ['theme-topcoat-desktop-dark', 'nib'],
+                    compress: false
+                },
+
+                files: [{
+                    src: 'src/topcoat-icon-button.styl',
+                    dest: 'css/topcoat-icon-button-desktop-dark.css'
                 }]
             }
+            // compile: {
+            //     options: {
+            //         paths: ['node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-button-base/src/mixins', 'node_modules/topcoat-theme/src/', 'node_modules/topcoat-theme/src/includes'],
+            //         import: ['button-mixin', 'utils', 'theme-topcoat-mobile-light', 'icons'],
+            //         compress: false
+            //     },
+
+            //     files: [{
+            //         src: 'src/topcoat-icon-button.styl',
+            //         dest: 'css/topcoat-icon-button.css'
+            //     }]
+            // }
         },
 
         cssmin: {
@@ -83,15 +133,6 @@ module.exports = function(grunt) {
             }
         },
 
-        jade: {
-            compile: {
-                expand: true,
-                cwd: 'test/perf',
-                src: ['*.jade'],
-                dest: 'test/perf/',
-                ext: '.test.html'
-            }
-        },
 
         simplemocha: {
             all: {
@@ -109,7 +150,6 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -118,7 +158,7 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus', 'jade']);
+    grunt.registerTask('build', ['stylus']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin', 'copy', 'topdoc']);
 
