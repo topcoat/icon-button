@@ -67,6 +67,7 @@
   modifiers:
     :active: Active state
     :disabled: Disabled state
+    :hover: Hover state
   markup:
     <button class="topcoat-icon-button">
       <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
@@ -103,12 +104,16 @@
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
+.topcoat-icon-button:hover {
+  background-color: #edf1f1;
+}
 /* topdoc
   name: Quiet Icon Button
   description: Like quiet button, but it has an icon.
   modifiers:
     :active: Active state
     :disabled: Disabled state
+    :hover: Hover state
   markup:
     <button class="topcoat-icon-button--quiet">
       <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
@@ -139,12 +144,20 @@
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
+.topcoat-icon-button--quiet:hover {
+  background-color: #edf1f1;
+  text-shadow: 0 1px #fff;
+  border: 1px solid #a5a8a8;
+  -webkit-box-shadow: inset 0 1px #fff;
+  box-shadow: inset 0 1px #fff;
+}
 /* topdoc
   name: Large Icon Button
   description: Like large button, but it has an icon.
   modifiers:
     :active: Active state
     :disabled: Disabled state
+    :hover: Hover state
   markup:
     <button class="topcoat-icon-button--large">
       <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
@@ -171,12 +184,16 @@
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
+.topcoat-icon-button--large:hover {
+  background-color: #edf1f1;
+}
 /* topdoc
   name: Large Quiet Icon Button
   description: Like large button, but it has an icon and this one is quiet.
   modifiers:
     :active: Active state
     :disabled: Disabled state
+    :hover: Hover state
   markup:
     <button class="topcoat-icon-button--large--quiet">
       <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
@@ -198,6 +215,13 @@
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.topcoat-icon-button--large--quiet:hover {
+  background-color: #edf1f1;
+  text-shadow: 0 1px #fff;
+  border: 1px solid #a5a8a8;
+  -webkit-box-shadow: inset 0 1px #fff;
+  box-shadow: inset 0 1px #fff;
 }
 .topcoat-icon,
 .topcoat-icon--large {
