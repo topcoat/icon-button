@@ -22,6 +22,7 @@
   modifiers:
     :active: Active state
     :disabled: Disabled state
+    :hover: Hover state
   markup:
     <button class="topcoat-icon-button">
       <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
@@ -55,12 +56,17 @@
 
 .topcoat-icon-button:disabled
     @extend .button--disabled
+
+.topcoat-icon-button:hover
+  background-color var-background-color--hover
+
 /* topdoc
   name: Quiet Icon Button
   description: Like quiet button, but it has an icon.
   modifiers:
     :active: Active state
     :disabled: Disabled state
+    :hover: Hover state
   markup:
     <button class="topcoat-icon-button--quiet">
       <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
@@ -89,12 +95,20 @@
 
 .topcoat-icon-button--quiet:disabled
     @extend .button--disabled
+
+.topcoat-icon-button--quiet:hover
+  background-color var-background-color--hover
+  text-shadow: var-text-shadow;
+  border: var-border;
+  box-shadow: var-box-shadow;
+
 /* topdoc
   name: Large Icon Button
   description: Like large button, but it has an icon.
   modifiers:
     :active: Active state
     :disabled: Disabled state
+    :hover: Hover state
   markup:
     <button class="topcoat-icon-button--large">
       <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
@@ -122,12 +136,17 @@
 
 .topcoat-icon-button--large:disabled
     @extend .button--disabled
+
+.topcoat-icon-button--large:hover
+  background-color var-background-color--hover
+
 /* topdoc
   name: Large Quiet Icon Button
   description: Like large button, but it has an icon and this one is quiet.
   modifiers:
     :active: Active state
     :disabled: Disabled state
+    :hover: Hover state
   markup:
     <button class="topcoat-icon-button--large--quiet">
       <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
@@ -154,6 +173,12 @@
 
 .topcoat-icon-button--large--quiet:disabled
     @extend .button--disabled
+
+.topcoat-icon-button--large--quiet:hover
+  background-color var-background-color--hover
+  text-shadow: var-text-shadow;
+  border: var-border;
+  box-shadow: var-box-shadow;
 
 .topcoat-icon
   inline-block()
