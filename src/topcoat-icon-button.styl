@@ -23,6 +23,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-icon-button">
       <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
@@ -60,6 +61,11 @@
 .topcoat-icon-button:hover
   background-color var-background-color--hover
 
+.topcoat-icon-button:focus
+  border var-border--focus
+  box-shadow var-box-shadow--focus
+  outline 0
+
 /* topdoc
   name: Quiet Icon Button
   description: Like quiet button, but it has an icon.
@@ -67,6 +73,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-icon-button--quiet">
       <span class="topcoat-icon" style="background-color:#A5A7A7;"></span>
@@ -94,13 +101,16 @@
     box-shadow var-box-shadow--down
 
 .topcoat-icon-button--quiet:disabled
-    @extend .button--disabled
+    @extend .topcoat-icon-button:disabled
 
 .topcoat-icon-button--quiet:hover
-  background-color var-background-color--hover
+  @extend .topcoat-icon-button:hover
   text-shadow: var-text-shadow;
   border: var-border;
   box-shadow: var-box-shadow;
+
+.topcoat-icon-button--quiet:focus
+  @extend .topcoat-icon-button:focus
 
 /* topdoc
   name: Large Icon Button
@@ -109,6 +119,7 @@
     :active: Active state
     :disabled: Disabled state
     :hover: Hover state
+    :focus: Focused
   markup:
     <button class="topcoat-icon-button--large">
       <span class="topcoat-icon--large" style="background-color:#A5A7A7;"></span>
@@ -135,10 +146,13 @@
     box-shadow var-box-shadow--down
 
 .topcoat-icon-button--large:disabled
-    @extend .button--disabled
+    @extend .topcoat-icon-button:disabled
 
 .topcoat-icon-button--large:hover
-  background-color var-background-color--hover
+  @extend .topcoat-icon-button:hover
+
+.topcoat-icon-button--large:focus
+  @extend .topcoat-icon-button:focus
 
 /* topdoc
   name: Large Quiet Icon Button
@@ -172,13 +186,13 @@
     @extend .topcoat-icon-button--quiet:active
 
 .topcoat-icon-button--large--quiet:disabled
-    @extend .button--disabled
+  @extend .topcoat-icon-button:disabled
 
 .topcoat-icon-button--large--quiet:hover
-  background-color var-background-color--hover
-  text-shadow: var-text-shadow;
-  border: var-border;
-  box-shadow: var-box-shadow;
+  @extend .topcoat-icon-button--quiet:hover
+
+.topcoat-icon-button--large--quiet:focus
+  @extend .topcoat-icon-button:focus
 
 .topcoat-icon
   inline-block()
