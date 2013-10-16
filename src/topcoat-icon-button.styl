@@ -54,17 +54,18 @@
 .topcoat-icon-button:hover
   background-color var-background-color--hover
 
-.topcoat-icon-button:active
-    background-color var-background-color--down
-    box-shadow var-box-shadow--down
-
-.topcoat-icon-button:disabled
-    @extend .button--disabled
-
 .topcoat-icon-button:focus
   border var-border--focus
-  box-shadow var-box-shadow--focus
+  box-shadow var-box-shadow--cta, var-box-shadow--focus
   outline 0
+
+.topcoat-icon-button:active
+  border var-border
+  background-color var-background-color--down
+  box-shadow var-box-shadow--down
+
+.topcoat-icon-button:disabled
+  @extend .button--disabled
 
 
 /* topdoc
@@ -94,27 +95,24 @@
     @extend .topcoat-icon-button
     button--quiet()
 
+.topcoat-icon-button--quiet:disabled
+    @extend .topcoat-icon-button:disabled
+
 .topcoat-icon-button--quiet:hover
   @extend .topcoat-icon-button:hover
   text-shadow: var-text-shadow;
   border: var-border;
   box-shadow: var-box-shadow;
 
-.topcoat-icon-button--quiet:active
+.topcoat-icon-button--quiet:focus, .topcoat-icon-button--quiet:hover:focus
+  @extend .topcoat-icon-button:focus
+
+.topcoat-icon-button--quiet:active, .topcoat-icon-button--quiet:focus:active
     color var-color
     text-shadow var-text-shadow
     background-color var-background-color--down
     border var-border
     box-shadow var-box-shadow--down
-
-.topcoat-icon-button--quiet:disabled
-    @extend .topcoat-icon-button:disabled
-
-.topcoat-icon-button--quiet:focus
-  @extend .topcoat-icon-button:focus
-
-.topcoat-icon-button--quiet:hover:focus
-  @extend .topcoat-icon-button:focus
 
 /* topdoc
   name: Large Icon Button
@@ -140,23 +138,22 @@
     - large
 */
 .topcoat-icon-button--large
-    @extend .topcoat-icon-button
-    width var-height--large
-    height var-height--large
-    line-height var-height--large
+  @extend .topcoat-icon-button
+  width var-height--large
+  height var-height--large
+  line-height var-height--large
+
+.topcoat-icon-button--large:disabled
+  @extend .topcoat-icon-button:disabled
 
 .topcoat-icon-button--large:hover
   @extend .topcoat-icon-button:hover
 
-.topcoat-icon-button--large:active
-    background-color var-background-color--down
-    box-shadow var-box-shadow--down
-
-.topcoat-icon-button--large:disabled
-    @extend .topcoat-icon-button:disabled
-
 .topcoat-icon-button--large:focus
   @extend .topcoat-icon-button:focus
+
+.topcoat-icon-button--large:active
+  @extend .topcoat-icon-button:active
 
 /* topdoc
   name: Large Quiet Icon Button
@@ -183,23 +180,22 @@
 */
 
 .topcoat-icon-button--large--quiet
-    @extend .topcoat-icon-button--large
-    button--quiet()
-
-.topcoat-icon-button--large--quiet:hover
-  @extend .topcoat-icon-button--quiet:hover
-
-.topcoat-icon-button--large--quiet:active
-    @extend .topcoat-icon-button--quiet:active
+  @extend .topcoat-icon-button--large
+  button--quiet()
 
 .topcoat-icon-button--large--quiet:disabled
   @extend .topcoat-icon-button:disabled
 
-.topcoat-icon-button--large--quiet:focus
+.topcoat-icon-button--large--quiet:hover
+  @extend .topcoat-icon-button--quiet:hover
+
+.topcoat-icon-button--large--quiet:focus, .topcoat-icon-button--large--quiet:hover:focus
   @extend .topcoat-icon-button:focus
 
-.topcoat-icon-button--large--quiet:hover:focus
-  @extend .topcoat-icon-button:focus
+.topcoat-icon-button--large--quiet:active, .topcoat-icon-button--large--quiet:focus:active
+  @extend .topcoat-icon-button--quiet:active
+
+
 
 .topcoat-icon
   inline-block()

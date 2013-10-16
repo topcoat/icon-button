@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         stylus: {
              mobilelight: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src', 'node_modules/topcoat-theme/src'],
                     import: ['theme-topcoat-mobile-light', 'nib'],
                     compress: false
                 },
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 
             mobiledark: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src', 'node_modules/topcoat-theme/src'],
                     import: ['theme-topcoat-mobile-dark', 'nib'],
                     compress: false
                 },
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 
             desktoplight: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src', 'node_modules/topcoat-theme/src'],
                     import: ['theme-topcoat-desktop-light', 'nib'],
                     compress: false
                 },
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 
             desktopdark: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-theme/src'],
+                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src', 'node_modules/topcoat-theme/src'],
                     import: ['theme-topcoat-desktop-dark', 'nib'],
                     compress: false
                 },
