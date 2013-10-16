@@ -29,11 +29,15 @@ module.exports = function(grunt) {
         },
 
         stylus: {
-             mobilelight: {
+
+            options: {
+                paths: grunt.file.expand('node_modules/topcoat-*/src'),
+                compress: false
+            },
+
+            mobilelight: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-mobile-light', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-mobile-light']
                 },
 
                 files: [{
@@ -44,9 +48,7 @@ module.exports = function(grunt) {
 
             mobiledark: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-mobile-dark', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-mobile-dark']
                 },
 
                 files: [{
@@ -57,9 +59,7 @@ module.exports = function(grunt) {
 
             desktoplight: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-desktop-light', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-desktop-light']
                 },
                 files: [{
                     src: 'src/topcoat-icon-button.styl',
@@ -69,9 +69,7 @@ module.exports = function(grunt) {
 
             desktopdark: {
                 options: {
-                    paths: ['node_modules/topcoat-button-base/src', 'node_modules/topcoat-utils/src', 'node_modules/topcoat-theme/src'],
-                    import: ['theme-topcoat-desktop-dark', 'nib'],
-                    compress: false
+                    import: ['theme-topcoat-desktop-dark']
                 },
 
                 files: [{
@@ -109,6 +107,17 @@ module.exports = function(grunt) {
             }
         },
 
+        autoprefixer: {
+          dist: {
+            files: [{
+              expand: true,
+              cwd: 'css',
+              src: ['*.css', '!*.min.css'],
+              dest: 'css/'
+            }]
+          }
+        },
+
         simplemocha: {
             all: {
                 src: ['test/*.test.js']
@@ -129,11 +138,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-topdoc');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus']);
+    grunt.registerTask('default', ['clean', 'build', 'test','release']);
+    grunt.registerTask('build', ['stylus', 'autoprefixer']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin', 'topdoc']);
+
 
 };

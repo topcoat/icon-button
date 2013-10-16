@@ -15,6 +15,7 @@
 * limitations under the License.
 *
 */
+
 .button,
 .topcoat-icon-button,
 .topcoat-icon-button--quiet,
@@ -26,8 +27,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   padding: 0;
   margin: 0;
@@ -40,29 +40,29 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;
 }
+
 .button--quiet {
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 .button--disabled,
 .topcoat-icon-button:disabled,
 .topcoat-icon-button--quiet:disabled,
 .topcoat-icon-button--large:disabled,
 .topcoat-icon-button--large--quiet:disabled {
   opacity: 0.3;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-  filter: alpha(opacity=30);
   cursor: default;
   pointer-events: none;
 }
+
 /* topdoc
   name: Icon Button
   description: Like button, but it has an icon.
@@ -85,6 +85,7 @@
     - button
     - icon
 */
+
 .topcoat-icon-button,
 .topcoat-icon-button--quiet,
 .topcoat-icon-button--large,
@@ -99,15 +100,16 @@
   -webkit-box-shadow: inset 0 1px #fff;
   box-shadow: inset 0 1px #fff;
   border: 1px solid #9daca9;
-  -webkit-border-radius: 6px;
   border-radius: 6px;
 }
+
 .topcoat-icon-button:hover,
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large:hover,
 .topcoat-icon-button--large--quiet:hover {
   background-color: #eff1f1;
 }
+
 .topcoat-icon-button:focus,
 .topcoat-icon-button--quiet:focus,
 .topcoat-icon-button--quiet:hover:focus,
@@ -119,6 +121,7 @@
   box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
 }
+
 .topcoat-icon-button:active,
 .topcoat-icon-button--large:active {
   border: 1px solid #9daca9;
@@ -126,6 +129,7 @@
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.1);
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
+
 /* topdoc
   name: Quiet Icon Button
   description: Like quiet button, but it has an icon.
@@ -149,12 +153,14 @@
     - icon
     - quiet
 */
+
 .topcoat-icon-button--quiet {
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large--quiet:hover {
   text-shadow: 0 1px #fff;
@@ -162,6 +168,7 @@
   -webkit-box-shadow: inset 0 1px #fff;
   box-shadow: inset 0 1px #fff;
 }
+
 .topcoat-icon-button--quiet:active,
 .topcoat-icon-button--quiet:focus:active,
 .topcoat-icon-button--large--quiet:active,
@@ -173,6 +180,7 @@
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.1);
   box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
+
 /* topdoc
   name: Large Icon Button
   description: Like large button, but it has an icon.
@@ -196,12 +204,14 @@
     - icon
     - large
 */
+
 .topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
   width: 4.375rem;
   height: 4.375rem;
   line-height: 4.375rem;
 }
+
 /* topdoc
   name: Large Quiet Icon Button
   description: Like large button, but it has an icon and this one is quiet.
@@ -225,12 +235,14 @@
     - large
     - quiet
 */
+
 .topcoat-icon-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 .topcoat-icon,
 .topcoat-icon--large {
   position: relative;
@@ -242,6 +254,7 @@
   vertical-align: middle;
   top: -1px;
 }
+
 .topcoat-icon--large {
   width: 2.499999998125rem;
   height: 2.499999998125rem;
