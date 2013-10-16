@@ -77,9 +77,9 @@
   text-shadow: 0 -1px rgba(0,0,0,0.69);
   vertical-align: baseline;
   background-color: #595b5b;
-  -webkit-box-shadow: inset 0 1px #727373;
-  box-shadow: inset 0 1px #727373;
-  border: 1px solid #303233;
+  -webkit-box-shadow: inset 0 1px #737373;
+  box-shadow: inset 0 1px #737373;
+  border: 1px solid #333434;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
@@ -87,12 +87,7 @@
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large:hover,
 .topcoat-icon-button--large--quiet:hover {
-  background-color: #646666;
-}
-.topcoat-icon-button:active {
-  background-color: #404141;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+  background-color: #626465;
 }
 .topcoat-icon-button:focus,
 .topcoat-icon-button--quiet:focus,
@@ -100,10 +95,17 @@
 .topcoat-icon-button--large:focus,
 .topcoat-icon-button--large--quiet:focus,
 .topcoat-icon-button--large--quiet:hover:focus {
-  border: 1px solid #0940fd;
-  -webkit-box-shadow: 0 0 0 2px #6fb5f1;
-  box-shadow: 0 0 0 2px #6fb5f1;
+  border: 1px solid #0036ff;
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
   outline: 0;
+}
+.topcoat-icon-button:active,
+.topcoat-icon-button--large:active {
+  border: 1px solid #333434;
+  background-color: #3f4041;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }</code></pre>
                 </div>
               </section>
@@ -132,18 +134,20 @@
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large--quiet:hover {
   text-shadow: 0 -1px rgba(0,0,0,0.69);
-  border: 1px solid #303233;
-  -webkit-box-shadow: inset 0 1px #727373;
-  box-shadow: inset 0 1px #727373;
+  border: 1px solid #333434;
+  -webkit-box-shadow: inset 0 1px #737373;
+  box-shadow: inset 0 1px #737373;
 }
 .topcoat-icon-button--quiet:active,
-.topcoat-icon-button--large--quiet:active {
+.topcoat-icon-button--quiet:focus:active,
+.topcoat-icon-button--large--quiet:active,
+.topcoat-icon-button--large--quiet:focus:active {
   color: #c6c8c8;
   text-shadow: 0 -1px rgba(0,0,0,0.69);
-  background-color: #404141;
-  border: 1px solid #303233;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+  background-color: #3f4041;
+  border: 1px solid #333434;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px rgba(0,0,0,0.05);
 }</code></pre>
                 </div>
               </section>
@@ -168,11 +172,6 @@
   width: 4.375rem;
   height: 4.375rem;
   line-height: 4.375rem;
-}
-.topcoat-icon-button--large:active {
-  background-color: #404141;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
 }</code></pre>
                 </div>
               </section>
