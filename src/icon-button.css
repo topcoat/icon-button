@@ -45,6 +45,7 @@
     extend: %button;
     padding: 0 0.75rem;
     line-height: var(line-height);
+    height: var(height);
     letter-spacing: var(letter-spacing);
     color: var(color);
     text-shadow: var(text-shadow);
@@ -159,9 +160,9 @@
 */
 .icon-button--large {
   extend: .icon-button;
-  width: 4.375rem;
-  height: 4.375rem;
-  line-height: 4.375rem;
+  width: calc(var(height--large));
+  height: calc(var(height--large));
+  line-height: calc(var(height--large));
 }
 
 .icon-button--large:disabled {

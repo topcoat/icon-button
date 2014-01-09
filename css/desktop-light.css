@@ -161,6 +161,7 @@ body {
 .topcoat-icon-button--large--quiet {
   padding: 0 0.75rem;
   line-height: 1.313rem;
+  height: 1.313rem;
   letter-spacing: 0;
   color: hsla(0, 0%, 27%, 1);
   text-shadow: 0 1px hsla(0, 100%, 100%, 1);
@@ -280,9 +281,12 @@ body {
 
 .topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
-  width: 4.375rem;
-  height: 4.375rem;
-  line-height: 4.375rem;
+  width: -webkit-calc(1.688rem);
+  width: calc(1.688rem);
+  height: -webkit-calc(1.688rem);
+  height: calc(1.688rem);
+  line-height: -webkit-calc(1.688rem);
+  line-height: calc(1.688rem);
 }
 
 /* topdoc
