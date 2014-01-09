@@ -312,14 +312,18 @@ body {
 .topcoat-icon,
 .topcoat-icon--large {
   overflow: hidden;
-  width: 1.62rem;
-  height: 1.62rem;
+  width: -webkit-calc(1.313rem * 0.62);
+  width: calc(1.313rem * 0.62);
+  height: -webkit-calc(1.313rem * 0.62);
+  height: calc(1.313rem * 0.62);
   vertical-align: middle;
   top: -1px;
 }
 
 .topcoat-icon--large {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: -webkit-calc(1.688rem * 0.63);
+  width: calc(1.688rem * 0.63);
+  height: -webkit-calc(1.688rem * 0.63);
+  height: calc(1.688rem * 0.63);
   top: -2px;
 }

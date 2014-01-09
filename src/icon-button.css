@@ -229,16 +229,16 @@
 .icon {
   extend: %inline-block;
   overflow: var(overflow);
-  width: 1.62rem;
-  height: 1.62rem;
+  width: calc(var(size--icon));
+  height: calc(var(size--icon));
   vertical-align: middle;
   top: var(icon-top);
 }
 
 .icon--large {
   extend: .icon;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: calc(var(size--icon--large));
+  height: calc(var(size--icon--large));
   top: var(icon-top--large);
 }
 
