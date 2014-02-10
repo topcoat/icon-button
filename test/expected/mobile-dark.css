@@ -17,30 +17,12 @@
 */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url('../font/SourceSansPro-Regular.otf');
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url('../font/SourceSansPro-Light.otf');
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url('../font/SourceSansPro-Semibold.otf');
-  font-weight: 600;
+  src: url("../font/SourceSansPro-Regular.otf");
 }
 
 body {
   font: 16px "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: hsla(200, 2%, 30%, 1);
 }
 
 :focus {
@@ -117,8 +99,6 @@ body {
 .topcoat-icon-button--quiet:disabled,
 .topcoat-icon-button--large:disabled,
 .topcoat-icon-button--large:disabled,
-.topcoat-icon-button--large--quiet:disabled,
-.topcoat-icon-button--large--quiet:disabled,
 .topcoat-icon-button--large--quiet:disabled {
   opacity: 0.3;
   cursor: default;
@@ -160,7 +140,7 @@ body {
 .topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
   padding: 0 0.75rem;
-  line-height: 3rem;
+  height: 3rem;
   letter-spacing: 1px;
   color: hsla(180, 2%, 78%, 1);
   text-shadow: 0 -1px hsla(0, 0%, 0%, 0.69);
@@ -169,8 +149,7 @@ body {
 }
 
 .topcoat-icon-button,
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
+.topcoat-icon-button--large {
   vertical-align: baseline;
   background-color: hsla(180, 1%, 35%, 1);
   box-shadow: inset 0 1px hsla(0, 0%, 45%, 1);
@@ -181,8 +160,6 @@ body {
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large:hover,
 .topcoat-icon-button--large:hover,
-.topcoat-icon-button--large--quiet:hover,
-.topcoat-icon-button--large--quiet:hover,
 .topcoat-icon-button--large--quiet:hover {
   background-color: hsla(200, 2%, 39%, 1);
 }
@@ -192,8 +169,6 @@ body {
 .topcoat-icon-button--quiet:hover:focus,
 .topcoat-icon-button--large:focus,
 .topcoat-icon-button--large:focus,
-.topcoat-icon-button--large--quiet:focus,
-.topcoat-icon-button--large--quiet:focus,
 .topcoat-icon-button--large--quiet:hover:focus,
 .topcoat-icon-button--large--quiet:focus,
 .topcoat-icon-button--large--quiet:hover:focus {
@@ -204,9 +179,7 @@ body {
 
 .topcoat-icon-button:active,
 .topcoat-icon-button--large:active,
-.topcoat-icon-button--large:active,
-.topcoat-icon-button--large--quiet:active,
-.topcoat-icon-button--large--quiet:active {
+.topcoat-icon-button--large:active {
   border: 1px solid hsla(180, 1%, 20%, 1);
   background-color: hsla(210, 2%, 25%, 1);
   box-shadow: inset 0 1px hsla(0, 0%, 0%, 0.05);
@@ -278,11 +251,8 @@ body {
     - large
 */
 
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
-  width: 4.375rem;
+.topcoat-icon-button--large {
   height: 4.375rem;
-  line-height: 4.375rem;
 }
 
 /* topdoc
@@ -309,17 +279,19 @@ body {
     - quiet
 */
 
+.topcoat-icon-button--large--quiet {
+  height: 4.375rem;
+}
+
 .topcoat-icon,
 .topcoat-icon--large {
   overflow: hidden;
   width: 1.62rem;
   height: 1.62rem;
   vertical-align: middle;
-  top: -1px;
 }
 
 .topcoat-icon--large {
   width: 2.5rem;
   height: 2.5rem;
-  top: -2px;
 }

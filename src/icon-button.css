@@ -42,23 +42,22 @@
 */
 
 %button--common {
-    extend: %button;
-    padding: 0 0.75rem;
-    line-height: var(line-height);
-    height: var(height);
-    letter-spacing: var(letter-spacing);
-    color: var(color);
-    text-shadow: var(text-shadow);
-    vertical-align: var(vertical-align);
-    border-radius: var(border-radius);
+  extend: %button;
+  padding: var(padding--icon-button);
+  height: var(height);
+  letter-spacing: var(letter-spacing);
+  color: var(color);
+  text-shadow: var(text-shadow);
+  vertical-align: var(vertical-align);
+  border-radius: var(border-radius);
 }
 
 .icon-button {
-    extend: %button--common;
-    vertical-align: baseline;
-    background-color: var(background-color);
-    box-shadow: var(box-shadow);
-    border: var(border);
+  extend: %button--common;
+  vertical-align: baseline;
+  background-color: var(background-color);
+  box-shadow: var(box-shadow);
+  border: var(border);
 }
 
 .icon-button:hover {
@@ -160,9 +159,7 @@
 */
 .icon-button--large {
   extend: .icon-button;
-  width: calc(var(height--large));
-  height: calc(var(height--large));
-  line-height: calc(var(height--large));
+  height: var(height--large);
 }
 
 .icon-button--large:disabled {
@@ -205,8 +202,9 @@
 */
 
 .icon-button--large--quiet {
-  extend: .icon-button--large;
+  extend: %button--common;
   extend: %button--quiet;
+  height: var(height--large);
 }
 
 .icon-button--large--quiet:disabled {
@@ -230,16 +228,14 @@
 .icon {
   extend: %inline-block;
   overflow: var(overflow);
-  width: calc(var(size--icon));
-  height: calc(var(size--icon));
+  width: var(size--icon);
+  height: var(size--icon);
   vertical-align: middle;
-  top: var(icon-top);
 }
 
 .icon--large {
   extend: .icon;
-  width: calc(var(size--icon--large));
-  height: calc(var(size--icon--large));
-  top: var(icon-top--large);
+  width: var(size--icon--large);
+  height: var(size--icon--large);
 }
 
