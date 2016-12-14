@@ -1,17 +1,25 @@
 {
   "name": "topcoat-icon-button",
-  "version": "0.4.0",
-  "description": "TopCoat icon button skin",
+  "version": "1.0.0",
+  "description": "Topcoat icon button skin",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "grunt test",
-    "prepublish": "grunt"
+    "test": "ava test",
+    "build:mobile-dark": "rsn --namespace='topcoat' -o ./css/mobile-dark-icon-button.css -p [topcoat-variables-shared,topcoat-variables-mobile,topcoat-variables-dark,topcoat-fonts,topcoat-root] ./src/topcoat-icon-button.css",
+    "build:desktop-dark": "rsn --namespace='topcoat' -o ./css/desktop-dark-icon-button.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,topcoat-fonts,topcoat-root] ./src/topcoat-icon-button.css",
+    "build:mobile-light": "rsn --namespace='topcoat' -o ./css/mobile-light-icon-button.css -p [topcoat-variables-shared,topcoat-variables-mobile,topcoat-variables-light,topcoat-fonts,topcoat-root] ./src/topcoat-icon-button.css",
+    "build:desktop-light": "rsn --namespace='topcoat' -o ./css/desktop-light-icon-button.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-light,topcoat-fonts,topcoat-root] ./src/topcoat-icon-button.css",
+    "build": "rm -rfv ./css/* && npm run build:mobile-dark && npm run build:mobile-light && npm run build:desktop-dark && npm run build:desktop-light",
+    "pretest": "npm run build",
+    "prepublish": "npm run topdoc",
+    "topdoc": "npm run build && rm -rfv ./demo/* && topdoc -s ./css -d ./docs -p 'Topcoat Button' -t './node_modules/topdoc-theme'",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/icon-button.git"
+    "url": "https://github.com/topcoat/icon-button.git"
   },
   "keywords": [
     "icon",
@@ -21,22 +29,41 @@
     "base",
     "adobe"
   ],
-  "author": "@dam Kristofer Joseph",
-  "license": "Apache",
+  "author": "Kristofer Joseph <kristoferjoseph@gmail.com> (http://kristoferjoseph.com/)",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/topcoat/topcoat/issues"
+  },
+  "homepage": "http://topcoat.io",
   "devDependencies": {
-    "grunt-contrib-stylus": "~0.6.0",
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.4.4",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-cssmin": "~0.6.1",
-    "grunt-simple-mocha": "~0.4.0",
-    "grunt-topdoc": "~0.1.3",
-    "topdoc-theme": "~0.2.7",
-    "grunt-autoprefixer": "~0.3.1"
+    "ava": "^0.16.0",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "cz-customizable": "^4.0.0",
+    "mocha": "^3.0.2",
+    "resin": "^1.2.0",
+    "semantic-release": "^6.3.2",
+    "topcoat-fonts": "^0.3.0",
+    "topcoat-root": "^1.0.0",
+    "topcoat-variables-dark": "^1.1.2",
+    "topcoat-variables-desktop": "^1.1.0",
+    "topcoat-variables-light": "^1.1.0",
+    "topcoat-variables-mobile": "^1.1.0",
+    "topcoat-variables-shared": "^1.1.0",
+    "topdoc": "^0.4.0",
+    "topdoc-theme": "^0.5.0"
   },
   "dependencies": {
-    "topcoat-utils": "~0.2.0",
-    "topcoat-button-base": "~0.6.1",
-    "topcoat-theme": "~0.6.0"
+    "topcoat-button-base": "^1.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }

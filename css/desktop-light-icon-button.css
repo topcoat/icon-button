@@ -1,66 +1,122 @@
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../font/SourceSansPro-Regular.otf');
+}
 
-.button,
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../font/SourceSansPro-Light.otf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../font/SourceSansPro-Semibold.otf');
+  font-weight: 600;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro",
+                 "HelveticaNeue-Light",
+                 "Helvetica Neue Light",
+                 "Helvetica Neue",
+                 Helvetica,
+                 Arial,
+                 "Lucida Grande",
+                 sans-serif;
+  font-weight: 400;
+  background: hsla(180, 5%, 88%, 1);
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
 .topcoat-icon-button,
 .topcoat-icon-button--quiet,
 .topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
   padding: 0;
   margin: 0;
   font: inherit;
   color: inherit;
   background: transparent;
   border: none;
+}
+
+.topcoat-icon-button--quiet,
+.topcoat-icon-button--large--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.topcoat-icon-button,
+.topcoat-icon-button--quiet,
+.topcoat-icon-button--large,
+.topcoat-icon-button--large--quiet {
   cursor: default;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-overflow: ellipsis;
+}
+
+.topcoat-icon-button,
+.topcoat-icon-button--quiet,
+.topcoat-icon-button--large,
+.topcoat-icon-button--large--quiet {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-icon-button,
+.topcoat-icon-button--quiet,
+.topcoat-icon-button--large,
+.topcoat-icon-button--large--quiet {
   white-space: nowrap;
   overflow: hidden;
-  text-decoration: none;
 }
 
-.button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+.topcoat-icon-button,
+.topcoat-icon-button--quiet,
+.topcoat-icon-button--large,
+.topcoat-icon-button--large--quiet,
+.topcoat-icon,
+.topcoat-icon--large {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
 }
 
-.button--disabled,
+.topcoat-icon-button,
+.topcoat-icon-button--quiet,
+.topcoat-icon-button--large,
+.topcoat-icon-button--large--quiet {
+  text-overflow: ellipsis;
+}
+
 .topcoat-icon-button:disabled,
 .topcoat-icon-button--quiet:disabled,
 .topcoat-icon-button--large:disabled,
 .topcoat-icon-button--large--quiet:disabled {
-  opacity: 0.3;
+  opacity: .3;
   cursor: default;
   pointer-events: none;
+}
+
+.topcoat-icon-button,
+.topcoat-icon-button--quiet,
+.topcoat-icon-button--large,
+.topcoat-icon-button--large--quiet {
+  text-decoration: none;
 }
 
 /* topdoc
@@ -90,16 +146,15 @@
 .topcoat-icon-button--quiet,
 .topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
-  padding: 0 0.25rem;
+  padding: 0 .25rem;
   line-height: 1.313rem;
   letter-spacing: 0;
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
+  color: hsla(0, 0%, 27%, 1);
+  text-shadow: 0 1px hsla(0, 100%, 100%, 1);
   vertical-align: baseline;
-  background-color: #595b5b;
-  -webkit-box-shadow: inset 0 1px #737373;
-  box-shadow: inset 0 1px #737373;
-  border: 1px solid #333434;
+  background-color: hsla(165, 8%, 91%, 1);
+  box-shadow: inset 0 1px hsla(0, 100%, 100%, 1);
+  border: 1px solid hsla(168, 8%, 65%, 1);
   border-radius: 4px;
 }
 
@@ -107,7 +162,7 @@
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large:hover,
 .topcoat-icon-button--large--quiet:hover {
-  background-color: #626465;
+  background-color: hsla(180, 7%, 94%, 1);
 }
 
 .topcoat-icon-button:focus,
@@ -116,18 +171,19 @@
 .topcoat-icon-button--large:focus,
 .topcoat-icon-button--large--quiet:focus,
 .topcoat-icon-button--large--quiet:hover:focus {
-  border: 1px solid #0036ff;
-  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
-  box-shadow: inset 0 1px rgba(255,255,255,0.36), 0 0 0 2px #6fb5f1;
+  border: 1px solid hsla(227, 100%, 50%, 1);
+  box-shadow: inset 0 1px hsla(0, 100%, 100%, .36), 0 0 0 2px hsla(208, 82%, 69%, 1);
   outline: 0;
 }
 
 .topcoat-icon-button:active,
-.topcoat-icon-button--large:active {
-  border: 1px solid #333434;
-  background-color: #3f4041;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.05);
-  box-shadow: inset 0 1px rgba(0,0,0,0.05);
+.topcoat-icon-button--quiet:active,
+.topcoat-icon-button--large:active,
+.topcoat-icon-button--large--quiet:active,
+.topcoat-icon-button--large--quiet:focus:active {
+  border: 1px solid hsla(168, 8%, 65%, 1);
+  background-color: hsla(180, 5%, 83%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 0%, .1);
 }
 
 /* topdoc
@@ -154,31 +210,23 @@
     - quiet
 */
 
-.topcoat-icon-button--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 .topcoat-icon-button--quiet:hover,
 .topcoat-icon-button--large--quiet:hover {
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  border: 1px solid #333434;
-  -webkit-box-shadow: inset 0 1px #737373;
-  box-shadow: inset 0 1px #737373;
+  text-shadow: 0 1px hsla(0, 100%, 100%, 1);
+  border: 1px solid hsla(168, 8%, 65%, 1);
+  box-shadow: inset 0 1px hsla(0, 100%, 100%, 1);
 }
 
 .topcoat-icon-button--quiet:active,
 .topcoat-icon-button--quiet:focus:active,
 .topcoat-icon-button--large--quiet:active,
-.topcoat-icon-button--large--quiet:focus:active {
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  background-color: #3f4041;
-  border: 1px solid #333434;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.05);
-  box-shadow: inset 0 1px rgba(0,0,0,0.05);
+.topcoat-icon-button--large--quiet:focus:active,
+.topcoat-icon-button--large--quiet:focus:focus:active {
+  color: hsla(0, 0%, 27%, 1);
+  text-shadow: 0 1px hsla(0, 100%, 100%, 1);
+  background-color: hsla(180, 5%, 83%, 1);
+  border: 1px solid hsla(168, 8%, 65%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 0%, .1);
 }
 
 /* topdoc
@@ -236,21 +284,11 @@
     - quiet
 */
 
-.topcoat-icon-button--large--quiet {
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 .topcoat-icon,
 .topcoat-icon--large {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
   overflow: hidden;
-  width: 0.81406rem;
-  height: 0.81406rem;
+  width: .81406rem;
+  height: .81406rem;
   vertical-align: middle;
   top: -1px;
 }
