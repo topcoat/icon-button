@@ -1,6 +1,6 @@
 {
   "name": "topcoat-icon-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Topcoat icon button skin",
   "style": "src/topcoat-icon-button.css",
   "directories": {
